@@ -1,8 +1,37 @@
+/**
+ * @brief Calculation of the maximum Sum of a k-sized subarray
+ *
+ * @details
+ * This algorithm uses the sliding window technique to efficiently compute the
+ * maximum sum of a subarray of size k. Through reusing the results from previous
+ * calculations it reduces the time complexity from O(n*k) to O(n). This is
+ * especially more efficient when dealing with large input arrays.
+ *
+ * In case of a subarray size that is smaller than the arrays size, the algorithm
+ * terminates instantly.
+ *
+ * Time Complexity:
+ * Worst-case O(n)
+ * Average-case O(n)
+ * Best-case O(n)
+ */
+
 #include <cassert>
 #include <vector>
 
+/**
+ * @namespace slidingwindow
+ * @brief slidingwindow algorithms
+ */
 namespace slidingwindow {
 
+/**
+ * Calculates the maximum sum of a subarray with size k
+ *
+ * @param array Array of which the maximum of its subarray should be calculated
+ * @param k Size of the subarray
+ * @return the calculated maximum sum of the subarray
+ */
 int maxSumKSizeSubarray(const std::vector<int>& array, const size_t k) {
     // terminate if the array size is smaller than the size of the subarray
     if (array.size() < k) {
@@ -27,8 +56,11 @@ int maxSumKSizeSubarray(const std::vector<int>& array, const size_t k) {
 
     return max_sum;
 }
-}
+}  // namespace slidingwindow
 
+/**
+ * @brief self tested implementation
+ */
 void test() {
     const std::vector arr_1 = {3, 4, -3, 0, 9, 3, -2, 7};
     const int sum_1 = slidingwindow::maxSumKSizeSubarray(arr_1, 3);
@@ -59,6 +91,9 @@ void test() {
     assert(sum_9 == INT_MIN);
 }
 
+/**
+ * @brief Main function
+ */
 int main() {
     test();
     return 0;
