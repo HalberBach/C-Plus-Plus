@@ -14,6 +14,9 @@
  * Worst-case O(n)
  * Average-case O(n)
  * Best-case O(n)
+ *
+ * For more information about this topic, there is more here:
+ * https://www.geeksforgeeks.org/dsa/window-sliding-technique/
  */
 
 #include <cassert>
