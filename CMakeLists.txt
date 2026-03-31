@@ -49,6 +49,7 @@ add_subdirectory(physics)
 add_subdirectory(probability)
 add_subdirectory(range_queries)
 add_subdirectory(search)
+add_subdirectory(slidingwindow)
 add_subdirectory(sorting)
 add_subdirectory(strings)
 
