@@ -35,7 +35,7 @@ namespace slidingwindow {
  * @param k Size of the subarray
  * @return the calculated maximum sum of the subarray
  */
-int maxSumKSizeSubarray(const std::vector<int>& array, const size_t k) {
+int max_sum_k_size_subarray(const std::vector<int>& array, const size_t k) {
     // terminate if the array size is smaller than the size of the subarray
     if (array.size() < k) {
         return INT_MIN;
